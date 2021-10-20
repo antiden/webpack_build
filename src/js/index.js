@@ -1,12 +1,13 @@
-import 'flickity/dist/flickity.min.css';
-import Flickity from 'flickity';
-
-window.addEventListener(`DOMContentLoaded`, () => {
+var app = (function () {
   
-  var elem = document.querySelector('.slider');
-  new Flickity( elem, {
-    contain: true,
-    wrapAround: true
-  });
+  var importSlider = require('./parts/slider.js');
+  var importLog = require('./parts/log.js');
+  
+  return {
+    sliderFunc : importSlider,
+    logFunc : importLog,
+  }
+  
+})();
 
-});
+export default app;
