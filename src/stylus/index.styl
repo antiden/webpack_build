@@ -1,0 +1,162 @@
+:root
+  --main_color: 66, 133, 244
+  --main_dark: 0,0,0
+  --main_white: 255,255,255
+  --main_gray: 240, 248, 255
+
+  --main_regular: Arial, Helvetica, sans-serif
+
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+  min-width 0
+  min-height 0
+
+html,
+body
+  background @css{rgb(var(--main_gray))}
+  font-family var(--main_regular)
+  font-size 18px
+  line-height 1.6em
+
+  +below(768px)
+    font-size 16px
+    line-height 1.6em
+
+  +below(480px)
+    font-size 14px
+    line-height 1.4em
+
+a
+  text-decoration none
+  color @css{rgb(var(--main_color))}
+  transition all 0.3s
+
+  &:hover
+    color @css{rgba(var(--main_color), 0.7)}
+
+h1
+h2
+  margin-bottom 30px
+
+section
+  padding-top 50px
+  padding-bottom 50px
+
+  &.nop
+    padding-top 0
+    padding-bottom 0
+
+  &.nopt
+    padding-top 0
+
+  &.nopb
+    padding-bottom 0
+
+  +below(768px)
+    padding-top 30px
+    padding-bottom 30px
+
+.container
+  max-width 900px
+  margin 0 auto
+  padding-left 30px
+  padding-right 30px
+
+.header
+  border-bottom 1px solid @css {rgb(var(--main_white))}
+  height 100px
+  
+  .container
+    height 100px
+    display flex
+    align-items stretch
+    justify-content space-between
+
+.header__logo
+  display flex
+  align-items center
+
+  a
+    text-decoration none
+    font-weight 900
+    text-transform uppercase
+
+.header__nav
+  flex 1
+  display flex
+  align-items stretch
+  justify-content flex-end
+
+  ul
+    padding 0
+    margin 0
+    list-style none
+    display flex
+    align-items stretch
+    height 100%
+
+    li
+      height 100%
+      position relative
+
+      a
+        display flex
+        align-items center
+        padding 0 15px
+        height 100%
+
+      ul
+        pointer-events none
+        opacity 0
+        absolute left top 100%
+        width 250px
+        margin-top 10px
+        height auto
+        background @css{rgb(var(--main_white))}
+        border-radius 10px
+        overflow hidden
+        transform translateX(-30%)
+        display block
+        box-shadow @css{rgba(var(--main_dark), 0.15)} 0 15px 30px
+        transition all 0.3s
+        z-index 100
+
+        li
+          height auto
+
+          a
+            height auto
+            padding 15px
+
+      &:hover
+        > ul
+          opacity 1
+          margin-top 0
+          pointer-events auto
+
+.section__slider
+  overflow hidden
+
+  .flickity-viewport
+    overflow initial
+
+.slider__item
+  width 80%
+  max-width 900px
+  padding 100px 50px
+  min-height 500px
+  display flex
+  align-items center
+  justify-content center
+  margin-right 30px
+  background @css{rgb(var(--main_color))}
+  text-align center
+  border-radius 15px
+  color @css{rgb(var(--main_white))}
+  font-size 2em
+  line-height normal
+
+  +below(980px)
+    background red
