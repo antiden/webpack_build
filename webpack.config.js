@@ -1,3 +1,4 @@
+const THEMEDIR = ".";
 const path = require('path');
 const WebpackAssetsManifest = require('webpack-assets-manifest');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -7,13 +8,13 @@ const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
   entry: {
     bundle: [
-      './src/js/index.js',
-      './src/stylus/index.styl'
+      `${THEMEDIR}/src/js/index.js`,
+      `${THEMEDIR}/src/stylus/index.styl`
     ],
   },
   output: {
     filename: 'js/[name].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, `${THEMEDIR}/dist`),
     clean: true,
   },
   optimization: {
@@ -66,21 +67,21 @@ module.exports = {
       patterns: [
         {
           to({ context, absoluteFilename }) {
-            return `favicons/${path.relative(context, absoluteFilename)}`;
+            return `${THEMEDIR}/favicons/${path.relative(context, absoluteFilename)}`;
           },
-          from: "src/favicons",
+          from: `${THEMEDIR}/src/favicons`,
         },
         {
           to({ context, absoluteFilename }) {
-            return `fonts/${path.relative(context, absoluteFilename)}`;
+            return `${THEMEDIR}/fonts/${path.relative(context, absoluteFilename)}`;
           },
-          from: "src/fonts",
+          from: `${THEMEDIR}/src/fonts`,
         },
         {
           to({ context, absoluteFilename }) {
-            return `images/${path.relative(context, absoluteFilename)}`;
+            return `${THEMEDIR}/images/${path.relative(context, absoluteFilename)}`;
           },
-          from: "src/images",
+          from: `${THEMEDIR}/src/images`,
         }
       ],
     }),
