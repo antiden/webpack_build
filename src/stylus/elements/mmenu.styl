@@ -1,0 +1,145 @@
+.mobile_menu__actions
+  display flex
+  align-items center
+  padding 20px
+
+.mobile_menu__city
+  flex 1
+
+.mobile__fav
+.mobile__personal
+  font-size 1.3em
+  
+  a
+    padding 0 5px
+
+.nav_mobile
+  ul
+    list-style none
+
+    li
+      display grid
+      align-items center
+      grid-template-columns 1fr auto
+      border-top 1px solid @css {rgb(var(--main_gray))}
+
+      a
+        padding 12px 20px
+        flex 1
+
+    ul
+      display none
+      grid-column 1 / -1
+      background @css {rgb(var(--main_white))}
+
+  .arrow
+    display flex
+    align-items center
+    justify-content center
+    width 50px
+    height 100%
+    cursor pointer
+    border-left 1px solid @css {rgb(var(--main_gray))}
+
+    &:hover
+      color @css {rgb(var(--main_color))}
+
+.mobile__contacts
+  background @css {rgb(var(--main_dark))}
+  padding 20px
+
+.mobile_menu
+  opacity 0
+  pointer-events none
+  absolute left top 100px
+  width 100%
+  background @css {rgb(var(--main_white))}
+  box-shadow @css {rgb(var(--main_dark), 0.15)} 0 20px 30px
+  transition all 0.3s
+  z-index 202
+
+  &.is-active
+    opacity 1
+    pointer-events auto
+    top 90px
+
+  &.active
+    .nav_mobile
+      > ul
+        &.active
+          display grid
+          
+          > li
+            display none
+            background @css {rgb(var(--main_color))}
+            color @css {rgb(var(--main_white))}
+
+            > a
+              color @css {rgb(var(--main_white))}
+
+              &:hover
+                color @css {rgb(var(--main_white))}
+
+            > .arrow
+              transform rotate(180deg)
+              
+              &:hover
+                color @css {rgb(var(--main_white))}
+
+            &.active
+              display grid
+
+              > ul
+                display grid
+
+                &.active
+                  display grid
+
+                  > li
+                    display none
+                    background @css {rgb(var(--main_color))}
+                    color @css {rgb(var(--main_white))}
+
+                    > a
+                      color @css {rgb(var(--main_white))}
+
+                      &:hover
+                        color @css {rgb(var(--main_white))}
+
+                    > .arrow
+                      transform rotate(180deg)
+
+                      &:hover
+                        color @css {rgb(var(--main_white))}
+
+                    &.active
+                      display grid
+
+                      > ul
+                        display grid
+
+                        &.active
+                          display grid
+
+                          > li
+                            display none
+                            background @css {rgb(var(--main_color))}
+                            color @css {rgb(var(--main_white))}
+
+                            > a
+                              color @css {rgb(var(--main_white))}
+
+                              &:hover
+                                color @css {rgb(var(--main_white))}
+
+                            > .arrow
+                              transform rotate(180deg)
+
+                              &:hover
+                                color @css {rgb(var(--main_white))}
+
+                            &.active
+                              display grid
+
+                              > ul
+                                display grid

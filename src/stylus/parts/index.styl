@@ -1,0 +1,96 @@
+.header
+  border-bottom 1px solid @css {rgb(var(--main_white))}
+  height 100px
+  
+  .container
+    height 100px
+    display flex
+    align-items stretch
+    justify-content space-between
+
+.header__logo
+  display flex
+  align-items center
+
+  a
+    text-decoration none
+    font-weight 900
+    text-transform uppercase
+
+.header__nav
+  flex 1
+  display flex
+  align-items stretch
+  justify-content flex-end
+
+  ul
+    padding 0
+    margin 0
+    list-style none
+    display flex
+    align-items stretch
+    height 100%
+
+    li
+      height 100%
+      position relative
+
+      a
+        display flex
+        align-items center
+        padding 0 15px
+        height 100%
+
+      ul
+        pointer-events none
+        opacity 0
+        absolute left top 100%
+        width 250px
+        margin-top 10px
+        height auto
+        background @css{rgb(var(--main_white))}
+        border-radius 10px
+        overflow hidden
+        transform translateX(-30%)
+        display block
+        box-shadow @css{rgba(var(--main_dark), 0.15)} 0 15px 30px
+        transition all 0.3s
+        z-index 100
+
+        li
+          height auto
+
+          a
+            height auto
+            padding 15px
+
+      &:hover
+        > ul
+          opacity 1
+          margin-top 0
+          pointer-events auto
+
+.section__slider
+  overflow hidden
+
+  .flickity-viewport
+    overflow initial
+
+.slider__item
+  width 80%
+  max-width 900px
+  padding 100px 50px
+  min-height 500px
+  display flex
+  align-items center
+  justify-content center
+  margin-right 30px
+  background @css{rgb(var(--main_color))}
+  text-align center
+  border-radius 15px
+  color @css{rgb(var(--main_white))}
+  font-size 2em
+  line-height normal
+
+  +below(980px)
+    background red

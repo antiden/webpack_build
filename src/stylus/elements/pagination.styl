@@ -1,0 +1,43 @@
+.pagination
+  margin-top 50px
+  display flex
+  align-items center
+  justify-content center
+
+  +below(768px)
+    margin-top 30px
+
+  span
+  a
+    display inline-flex
+    align-items center
+    justify-content center
+    width 50px
+    height 50px
+    border 1px solid @css {rgb(var(--main_gray))}
+    color @css {rgb(var(--main_dark))}
+    background @css {rgb(var(--main_white))}
+    border-right none
+    position relative
+    z-index 1
+
+    &:last-child
+      border-right 1px solid @css {rgb(var(--main_gray))}
+
+    &:hover
+      border-color @css { rgb(var(--main_color)) }
+      background @css {rgb(var(--main_color))}
+      color @css { rgb(var(--main_white)) }
+
+    &.current
+      background @css {rgb(var(--main_dark))}
+      color @css { rgb(var(--main_white)) }
+      border-color @css {rgb(var(--main_dark))}
+
+.pagination_top
+  .pagination
+    margin-top 0
+    margin-bottom 50px
+
+    +below(768px)
+      margin-bottom 30px

@@ -1,0 +1,148 @@
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone
+  margin 5px 20px 20px 0
+
+.aligncenter
+div.aligncenter
+  display block
+  margin 5px auto 5px auto
+  width auto
+
+.alignright
+  float right
+  margin 5px 0 20px 20px
+  width auto
+
+.alignleft
+  float left
+  margin 5px 20px 20px 0
+  width auto
+
+a img.alignright
+  float right
+  margin 5px 0 20px 20px
+  width auto
+  border-radius 10px
+
+a img.alignnone
+  margin 5px 20px 20px 0
+  width auto
+  border-radius 10px
+
+a img.alignleft
+  float left
+  margin 5px 20px 20px 0
+  width auto
+  border-radius 10px
+
+a img.aligncenter
+  display block
+  margin-left auto
+  margin-right auto
+  width auto
+  border-radius 10px
+
+.wp-caption
+  background @css {rgb(var(--main_white))}
+  border 1px solid @css {rgb(var(--main_graydark))}
+  max-width 96% /* Image does not overflow the content area */
+  padding 5px 3px 10px
+  text-align center
+
+.wp-caption.alignnone
+  margin 5px 20px 20px 0
+
+.wp-caption.alignleft
+  margin 5px 20px 20px 0
+
+.wp-caption.alignright
+  margin 5px 0 20px 20px
+
+.wp-caption img
+  border 0 none
+  height auto
+  margin 0
+  max-width 98.5%
+  padding 0
+  width auto
+
+.wp-caption p.wp-caption-text
+  font-size 11px
+  line-height 17px
+  margin 0
+  padding 0 4px 5px
+
+/* Text meant only for screen readers. */
+.screen-reader-text
+  clip rect(1px, 1px, 1px, 1px)
+  position absolute !important
+  height 1px
+  width 1px
+  overflow hidden
+
+.screen-reader-textfocus
+  background-color @css {rgb(var(--main_graydark))}
+  border-radius 3px
+  box-shadow 0 0 2px 2px @css {rgb(0, 0%, 0%, 15%)}
+  clip auto !important
+  color #21759b
+  display block
+  font-size 0.875rem
+  font-weight bold
+  height auto
+  left 5px
+  line-height normal
+  padding 15px 23px 14px
+  text-decoration none
+  top 5px
+  width auto
+  z-index 100000 /* Above WP toolbar. */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden
+  display none
+
+/*
+ * Hide only visually, but have it available for screen readers
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden
+  border 0
+  clip rect(0 0 0 0)
+  height 1px
+  margin -1px
+  overflow hidden
+  padding 0
+  position absolute
+  width 1px
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active
+.visuallyhidden.focusable:focus
+  clip auto
+  height auto
+  margin 0
+  overflow visible
+  position static
+  width auto
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible
+  visibility hidden

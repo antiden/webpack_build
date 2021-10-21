@@ -1,0 +1,10 @@
+clearfix()
+  zoom 1 if support-for-ie
+
+  &:before
+  &:after
+    content ""
+    display table
+
+  &:after
+    clear both

@@ -1,0 +1,19 @@
+blockquote
+  background @css { rgba(var(--main_gray), 0.5) }
+  padding 30px
+  margin 30px 0
+  font-family var(--main_regular)
+  position relative
+  overflow hidden
+  border-left 5px solid @css { rgb(var(--main_gray)) }
+  text-align left
+
+  &::after
+    content url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 97 66'><path d='M7.5 75H30L45 45V0H0V45H22.5L7.5 75ZM67.5 75H90L105 45V0H60V45H82.5L67.5 75Z'/></svg>")
+    absolute right bottom -5px
+    opacity 0.1
+    width 100px
+    height auto
+
+  p
+    position relative

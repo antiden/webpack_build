@@ -1,0 +1,33 @@
+.tabs
+  +below(980px)
+    padding-left 30px
+    padding-right 30px
+
+  > ul
+    list-style none
+    display flex
+    align-items center
+
+    li
+      a
+        height 50px
+        padding 0 30px
+        cursor pointer
+        display flex
+        align-items center
+        justify-content center
+        position relative
+
+        span
+          font-family var(--font_bold)
+          margin-left 5px
+
+      &.active
+        a
+          background @css {rgb(var(--main_white))}
+
+.tabs__content
+  background @css {rgb(var(--main_white))}
+  padding 30px
+
+  

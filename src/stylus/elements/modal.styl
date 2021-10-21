@@ -1,0 +1,176 @@
+.modal_form
+  border-radius var(--border_radius)
+  max-width 450px
+  padding 50px
+  overflow initial
+  text-align left
+
+  +below(360px)
+    padding 30px
+
+  .fancybox-close-small
+    padding 0
+    min-width 0
+    background none
+    border none
+    width 30px
+    height 30px
+    top -30px
+    right -30px
+
+    +below(768px)
+      top 15px
+      right 15px
+
+    svg
+      transition all 0.3s
+      
+      path
+        fill @css {rgb(var(--main_white))}
+
+        +below(768px)
+          fill @css {rgb(var(--main_dark))}
+
+    &:hover
+      svg
+        path
+          opacity 0.9
+
+  .form__title
+    font-size 2em
+    line-height normal
+    font-family var(--font_bold)
+    margin-bottom 20px
+    text-align center
+
+    +below(480px)
+      font-size 1.5em
+
+  .form__subtitle
+    margin-bottom 20px
+    color @css {rgba(var(--main_dark), 50%)}
+
+  .form__item
+    margin-bottom 20px
+
+  .form__checkbox
+    a
+      link()
+
+  .form__submit
+    display flex
+    align-items center
+
+    input
+      button()
+      font-size 1em
+
+      &:hover
+        border-color @css {rgb(var(--main_dark))}
+
+    .ajax-loader
+      display none !important
+
+  .form__terms
+    margin-top 10px
+    font-size 0.8em
+    opacity 0.7
+    line-height 1.4em
+    transition opacity 0.3s
+
+    a
+      link()
+
+    &:hover
+      opacity 1
+
+  .form__error
+    input
+    select
+    textarea
+      box-shadow 0 0 0 3px @css {rgba(var(--main_red), 0.2)}
+
+  .description
+    font-size 1.3em
+
+    &.error
+      color @css {rgb(var(--main_red))}
+
+  .message__success
+    color @css {rgb(var(--main_green))}
+
+.popup-window-buttons
+  display flex
+  align-items center
+  justify-content center
+  font-size 0.9em
+
+  +below(440px)
+    display block
+
+    .btn
+      margin 0 0 15px
+      width 100%
+
+      &:last-child
+        margin-bottom 0
+
+//popup
+.popup-window
+  width 100%
+  max-width 450px
+  padding 0
+
+.popup-window-titlebar-text
+  font-weight normal
+  font-family var(--head_bold)
+
+.popup-window-buttons
+  padding 0 20px 20px
+
+  span
+    button()
+    background @css {rgb(var(--main_color))} !important
+    border-color @css {rgb(var(--main_color))} !important
+
+    &:hover
+      background @css {rgb(var(--main_color_hover))} !important
+      border-color @css {rgb(var(--main_color_hover))} !important
+
+#login
+  width 100%
+
+  .form__message
+    padding 0
+    background transparent
+    border none
+
+    .errortext
+      background @css{rgba(var(--main_red), 0.15)}
+      border 1px solid @css{rgba(var(--main_red), 0.3)}
+      margin-bottom 20px
+      display block
+      padding 10px 15px
+
+.form__store
+  display flex
+  align-items center
+  
+  label
+    flex 1
+    margin-left 5px
+
+.form__list
+  margin 20px 0 0 15px !important
+  
+  ul
+    padding 0
+    
+    li
+      a
+        link()
+
+.form__socials
+  margin 20px 0 0 !important
+  padding-top 20px
+  border-top @css {rgb(var(--main_gray))} 1px solid
