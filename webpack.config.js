@@ -41,6 +41,7 @@ module.exports = {
           {loader: "css-loader",
             options: {
               sourceMap: true,
+              url: false,
             },
           },
           {loader: "stylus-loader", 
@@ -50,11 +51,12 @@ module.exports = {
                 import: ["nib"],
                 compress: true,
                 sourceMap: true,
+                resolveURL: false,
               }
             }
           }
         ]
-      }
+      },
     ]
   },
   plugins: [
