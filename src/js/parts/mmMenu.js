@@ -8,20 +8,39 @@ var mobileMenuFunc = function() {
           mobileBg = document.querySelector( ".mmBb" );
 
     if (mobileMenu) {
-      mobileButton.onclick = function() {
-        document.body.classList.toggle('mm_open');
+      function mmMenuOpen () {
+        document.body.classList.add('mm_open');
         document.getElementById("hamburger").checked = true;
-        document.getElementById("hamburger_mobile").checked = true;
+        document.getElementById("hamburger_close").checked = true;
+      }
+  
+      function mmMenuClose () {
+        document.body.classList.remove('mm_open');
+        document.getElementById("hamburger").checked = false;
+        document.getElementById("hamburger_close").checked = false;
+      }
+
+      function mmHasActive () {
+        const isActive = document.body.classList.contains("mm_open");
+        if (isActive) {
+          ocument.getElementById("hamburger").checked = true;
+          document.getElementById("hamburger_close").checked = true;
+        } else {
+          document.getElementById("hamburger").checked = false;
+          document.getElementById("hamburger_close").checked = false;
+        }
+      }
+
+      mmHasActive();
+
+      mobileButton.onclick = function() {
+        mmMenuOpen();
       }
       mobileButtonClose.onclick = function() {
-        document.body.classList.remove('mm_open');
-        document.getElementById("hamburger").checked = false;
-        document.getElementById("hamburger_close").checked = false;
+        mmMenuClose();
       }
       mobileBg.onclick = function() {
-        document.body.classList.remove('mm_open');
-        document.getElementById("hamburger").checked = false;
-        document.getElementById("hamburger_close").checked = false;
+        mmMenuClose();
       }
     }
 
