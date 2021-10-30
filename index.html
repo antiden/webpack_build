@@ -29,6 +29,13 @@
         <div class="header__logo logo">
           <a href="#">Logo</a>
         </div>
+        <div class="header__spacer"></div>
+        <div class="header__mobile_button">
+          <div class="mm_button">
+            <input type="checkbox" id="hamburger" class="hamburger" />
+            <label for="hamburger"><i></i><span></span></label>
+          </div>
+        </div>
         <div class="header__nav nav">
           <nav class="nav main_nav" role="navigation">
             <ul>
@@ -74,5 +81,34 @@
     </main>
   </div>
   <script src="dist/js/bundle.js"></script>
+
+  <div class="mobile_menu">
+    <div class="mm_button_close">
+      <input type="checkbox" id="hamburger_close" class="hamburger" />
+      <label for="hamburger_close"><i></i><span></span></label>
+    </div>
+    <nav class="nav mobile_nav" role="navigation">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Contacts</a>
+          <ul>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Send message</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="mmBb"></div>
 </body>
 </html>

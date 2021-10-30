@@ -8,8 +8,8 @@ const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
   entry: {
     bundle: [
-      `${THEMEDIR}/src/js/index.js`,
-      `${THEMEDIR}/src/stylus/index.styl`
+      `./src/js/index.js`,
+      `./src/stylus/index.styl`
     ],
   },
   output: {
@@ -69,21 +69,21 @@ module.exports = {
       patterns: [
         {
           to({ context, absoluteFilename }) {
-            return `${THEMEDIR}/favicons/${path.relative(context, absoluteFilename)}`;
+            return `favicons/${path.relative(context, absoluteFilename)}`;
           },
-          from: `${THEMEDIR}/src/favicons`,
+          from: `./src/favicons`,
         },
         {
           to({ context, absoluteFilename }) {
-            return `${THEMEDIR}/fonts/${path.relative(context, absoluteFilename)}`;
+            return `fonts/${path.relative(context, absoluteFilename)}`;
           },
-          from: `${THEMEDIR}/src/fonts`,
+          from: `./src/fonts`,
         },
         {
           to({ context, absoluteFilename }) {
-            return `${THEMEDIR}/images/${path.relative(context, absoluteFilename)}`;
+            return `images/${path.relative(context, absoluteFilename)}`;
           },
-          from: `${THEMEDIR}/src/images`,
+          from: `./src/images`,
         }
       ],
     }),

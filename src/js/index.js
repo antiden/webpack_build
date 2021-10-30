@@ -1,11 +1,15 @@
 var app = (function () {
   
-  var importSlider = require('./parts/slider.js');
-  var importLog = require('./parts/log.js');
+  var importFlickity = require('./parts/flickity.js');
+  var importSticky = require('./parts/sticky.js');
+  var importMask = require('./parts/mask.js');
+  var importMobileMenu = require('./parts/mmMenu.js');
   
   return {
-    sliderFunc : importSlider,
-    logFunc : importLog,
+    flickityFunc : importFlickity,
+    stickyFunc : importSticky,
+    maskFunc : importMask,
+    mobileMenuFunc : importMobileMenu,
   }
   
 })();
