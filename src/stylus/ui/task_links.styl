@@ -1,0 +1,32 @@
+#block-ivfrt-local-tasks
+  ul
+    padding 0
+    margin 0
+    list-style none
+    display flex
+    align-items center
+    justify-content center
+    border-bottom 1px solid @css {rgb(var(--main_gray))}
+    border-top 1px solid @css {rgb(var(--main_gray))}
+    flex-wrap nowrap
+    min-width 100%
+    overflow-x auto
+
+    +below(768px)
+      justify-content flex-start
+
+    li
+      flex 0 0 auto
+      
+      a
+        display block
+        text-align center
+        padding 10px 15px
+        color @css{rgba(var(--main_dark), 0.5)}
+
+        &:hover
+          color @css{rgb(var(--main_color_hover))}
+
+        &.is-active
+          background @css {rgb(var(--main_gray))}
+          color @css {rgb(var(--main_color))}

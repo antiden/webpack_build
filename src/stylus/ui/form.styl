@@ -1,0 +1,234 @@
+// forms
+form
+  input:not([type="checkbox"])
+  textarea
+  select
+    background @css{rgba(var(--main_gray), 0.5)}
+    border 1px solid @css {rgb(var(--main_graydark))}
+    padding 0 15px
+    height var(--button_height)
+    font-size 1em
+    border-radius 5px
+    font-family var(--font_regular)
+    width 100%
+    box-sizing border-box
+    outline none
+    transition all 0.3s
+
+    &:focus
+      box-shadow 0 0 0 3px @css {rgba(var(--main_dark), 0.2)}
+      border-color @css{rgb(var(--main_dark))}
+
+    &.error
+      border-color @css { rgb(var(--main_red)) }
+
+      &:focus
+        box-shadow 0 0 0 3px @css {rgba(var(--main_dark), 0.2)}
+
+    &[type="checkbox"]
+      width auto
+      margin 3px 5px 0 0
+      float left
+
+    &[type="submit"]
+      &[disabled]
+        opacity 0.5
+
+  textarea
+    width 100%
+    height auto
+    max-height 130px
+    padding 15px
+
+  select
+    appearance none
+    -moz-appearance none
+    -webkit-appearance none
+    padding 5px 40px 5px 15px
+    display inline-flex
+    align-items center
+    justify-content center
+    background-image linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%)
+    background-position calc(100% - 20px) calc(1em + 6px), calc(100% - 15px) calc(1em + 6px)
+    background-size 5px 5px, 5px 5px
+    background-repeat no-repeat
+
+  input
+    &.form-date
+      &::-webkit-input-placeholder
+      &:-moz-placeholder
+      &::-moz-placeholder
+      &:-ms-input-placeholder
+        color transparent
+        opacity 1
+
+.terms
+  font-size 0.8em
+  line-height normal
+  opacity 0.5
+  transition opacity 0.3s
+
+  &:hover
+    opacity 1
+
+  a
+    link()
+
+.form__accept
+  a
+    link()
+    margin-left 5px
+
+.form-item
+  margin-bottom 20px
+
+  &.nom
+    margin 0
+
+  label
+    margin-bottom 5px
+    font-family var(--font_bold)
+    font-size 0.9em
+    opacity 0.7
+    display inline-flex
+    line-height normal
+
+  .description
+    font-size 0.8em
+    line-height normal
+    margin-top 5px
+    color @css { rgba(var(--main_dark), 0.5) }
+
+  .image-widget
+    display flex
+    align-items center
+
+    .focal-point-wrapper
+      margin-right 15px
+
+    input
+      height auto
+      width auto
+      padding 5px
+
+    .focal-point-preview-link
+      display none !important
+
+    .form__submit
+      button
+        margin 0 0 0 15px
+        min-width auto
+        height auto
+        padding 5px 10px
+        background @css { rgb(var(--main_gray)) }
+        color @css { rgb(var(--main_color)) }
+
+        &:hover
+          background @css { rgb(var(--main_color)) }
+          color @css { rgb(var(--main_white)) }
+
+div[data-drupal-field-elements="date"]
+  .form-item
+    margin 0
+    width 100%
+
+.form-wrapper
+  > h4
+    margin-bottom 15px
+    font-family var(--font_bold)
+    font-weight normal
+    font-size 1.3em
+
+.image-widget
+  display flex
+  align-items center
+  flex-wrap wrap
+
+  img
+    max-width 60px
+    margin-right 15px
+
+  input
+    flex 1
+
+  .messages
+    background @css{rgba(var(--main_green), 0.05)}
+    padding 10px
+    color @css{rgb(var(--main_green))}
+    font-size 0.9em
+    line-height normal
+    border 1px solid @css{rgba(var(--main_green), 0.3)}
+    border-radius 5px
+    margin-bottom  15px
+
+    &.messages--error
+      background @css{rgba(var(--main_red), 0.05)}
+      color @css{rgb(var(--main_red))}
+      border-color @css{rgba(var(--main_red), 0.3)}
+
+.form__term
+  font-size 0.9em
+  opacity 0.5
+  transition opacity 0.3s
+
+  a
+    link()
+    font-family var(--font_regular)
+
+  &:hover
+    opacity 1
+
+.form__full_item
+  grid-column 1 / -1
+
+.form-managed-file
+  border 1px dashed @css{rgba(var(--main_dark), 0.3)}
+  border-radius 10px
+  padding 15px
+  display flex
+  justify-content flex-start
+  flex-direction column
+  min-height 100px
+  cursor pointer
+  transition all 0.3s
+
+  +below(980px)
+    margin-top 10px
+
+  > label
+    flex 1
+    display flex
+    align-items center
+    justify-content center
+    min-height 100%
+    cursor pointer
+    margin 0 0 15 !important
+
+  .form-item
+    display flex
+    align-items center
+    margin-bottom 0
+
+    label
+      text-align left
+      display inline
+      flex auto
+      font-family var(--font_regular)
+      margin 0 0 0 5px
+      cursor default
+
+    .pretty
+      display flex
+      align-items center
+
+  .form__submit
+    button
+      margin-top 10px
+      height auto
+      min-width auto
+      padding 5px 15px
+      font-size 0.8em
+      line-height normal
+
+  &:hover
+    border-color @css{rgb(var(--main_dark))}

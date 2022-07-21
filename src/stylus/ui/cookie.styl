@@ -1,0 +1,54 @@
+/**********Cookie************/
+#sliding-popup
+    width 100%
+    max-width 420px
+    bottom 0
+    left initial
+    right 0
+    padding 0 30px 30px
+    background none !important
+    pointer-events none
+
+.eu-cookie-compliance-banner
+    pointer-events auto
+    background @css {rgb(var(--main_white))}
+    font-size 0.9em
+    padding 20px
+    color @css {rgb(var(--main_dark))}
+    box-shadow @css {rgba(var(--main_dark), 0.3)} 0 15px 60px
+    border 2px solid @css {rgba(var(--main_white), 0.1)}
+    border-radius 5px
+    overflow hidden
+
+    .eu-cookie-compliance-message
+        float none
+        max-width 100%
+        color @css {rgb(var(--main_dark))}
+        margin 0
+
+        p
+            margin 0
+
+        button
+            display none
+
+        a
+            link()
+
+    .eu-cookie-compliance-buttons
+        float none
+        display flex
+        flex-wrap wrap
+        max-width initial
+        margin 10px 0 0
+
+        button
+            button()
+            height auto
+            padding 10px 15px
+
+            &:last-child
+                margin-right 0
+
+.eu-cookie-compliance-content
+    max-width none

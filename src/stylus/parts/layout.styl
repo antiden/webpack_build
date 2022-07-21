@@ -1,26 +1,169 @@
-button:not(.flickity-button)
+.container
+  container()
+
+.button
   button()
 
-section
-  padding-top 50px
+  &.button_blue
+    button(@css{rgb(var(--main_color))}, @css{rgb(var(--main_color))}, @css{rgb(var(--main_white))}, @css{rgba(var(--main_color_hover))})
+
+  &.button_light
+    button(@css{rgb(var(--main_white))}, @css{rgb(var(--main_color))}, @css{rgb(var(--main_color))}, @css{rgba(var(--main_color_hover))})
+
+/* main */
+.main_content
+  padding-top 30px
   padding-bottom 50px
 
-  &.nop
-    padding-top 0
-    padding-bottom 0
+  +below(768px)
+    padding-bottom 30px
 
-  &.nopt
-    padding-top 0
+.main
+  position relative
+  z-index 2
 
-  &.nopb
-    padding-bottom 0
+.layout
+  min-height 100vh
+  display grid
+  grid-template-rows auto auto 1fr auto
+
+.toolbar-tray-open
+  .layout
+    min-height calc(100vh - 54px)
+
+.view-frontpage
+  .view__empty
+    text-align center
+
+.with_aside
+  > .container
+    display grid
+    grid-template-columns 250px 1fr
+    grid-gap 50px
+
+    &::before
+      display none
+    
+    +below(980px)
+      grid-gap 30px
+
+    .container
+      padding-left 0
+      padding-right 0
+      max-width auto
+
+  .block.container
+    > .block__inner
+      padding-left 0
+      padding-right 0
+      max-width auto
+
+/* sections */
+section
+  background transparent
+  padding-bottom 50px
+
+.section__header
+  display flex
+  align-items center
+  justify-content space-between
+  gap 15px
+  margin-bottom 30px
+
+  h2
+    margin 0
+
+  .link
+    link()
+    display inline-flex
+    align-items center
+    gap 5px
+    box-shadow none
+    font-size 0.9em
+
+    &:hover
+      gap 10px
+
+.section__title
+  margin-bottom 30px
+
+.page_text
+  ul,
+  ol
+    padding 0 0 0 30px
+    margin-bottom 15px
+
+  a
+    link()
+
+.section_content.content
+  p,
+  > div
+    > anot(.button)
+      link()
+
+  > ul,
+  > ol
+    margin 0 0 15px 30px
+
+  img
+    &[align="left"],
+    &[align="right"]
+      float left
+      max-width 270px
+      min-height 380px
+      object-fit cover
+      margin 0 30px 15px 0
+      border-radius 15px
+
+    &[align="right"]
+      float right
+      margin 0 0 15px 30px
+
+.p
+  padding-top 50px
+  padding-bottom 50px
 
   +below(768px)
     padding-top 30px
     padding-bottom 30px
 
-.container
-  max-width 900px
-  margin 0 auto
-  padding-left 30px
-  padding-right 30px
+.pt
+  padding-top 50px
+
+  +below(768px)
+    padding-top 30px
+
+.pb
+  padding-bottom 50px
+
+  +below(768px)
+    padding-bottom 30px
+
+.nop
+  padding 0
+
+.nopb
+  padding-bottom 0
+
+.nopt
+  padding-top 0
+
+.psm
+  padding-top 30px
+  padding-bottom 30px
+
+.ptsm
+  padding-top 30px
+
+.pbsm
+  padding-bottom 30px
+
+.bt
+  border-top 1px solid @css{rgb(var(--main_graydark))}
+
+.bb
+  border-bottom 1px solid @css{rgb(var(--main_graydark))}
+
+.bg_gray
+  background @css{rgb(var(--main_gray))}

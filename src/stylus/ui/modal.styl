@@ -1,0 +1,107 @@
+.modal
+  border-radius 10px
+  max-width 500px
+  padding 0 !important
+  text-align left
+
+  .fancybox-close-small
+    padding 0
+    min-width 0
+    background none
+    border none
+    width 30px
+    height 30px
+    top -30px
+    right -30px
+
+    +below(480px)
+      top 15px
+      right 15px
+
+    svg
+      transition all 0.3s
+
+      path
+        fill @css{rgb(var(--main_white))}
+        
+        +below(480px)
+          fill @css{rgb(var(--main_dark))}
+
+    &:hover
+      svg
+        path
+          opacity 0.9
+
+  .form__title
+    font-size 1.7em
+    line-height normal
+    font-family var(--font_bold)
+    margin-bottom 30px
+    text-align center
+  
+    +below(480px)
+      font-size 1.3em
+  
+    .form__subtitle
+      margin-bottom 20px
+      font-size 0.9em
+      line-height 1.4em
+      color @css{rgba(var(--main_dark), 0.5)}
+
+  .form__item
+    margin-bottom 20px
+
+  .form__action
+    display flex
+    align-items center
+
+    .ajax-loader
+      display none !important
+
+  .form__terms
+    margin-top 10px
+    font-size 0.8em
+    opacity 0.7
+    line-height 1.4em
+    transition opacity 0.3s
+
+    &:hover
+      opacity 1
+
+  .form__error
+    input
+    select
+    textarea
+      box-shadow 0 0 0 3px @css{rgba(var(--main_red), 0.2)}
+
+  .description
+    font-size 1.3em
+
+    &.error
+      color @css{rgb(var(--main_red))}
+
+  .message__success
+    color @css{rgb(var(--main_green))}
+
+.modal__header
+  font-size 2em
+  line-height normal
+  font-family var(--font_bold)
+  margin-bottom 20px
+  text-align center
+
+  +below(480px)
+    font-size 1.5em
+
+.modal__content
+  padding 50px
+  overflow-y auto
+
+  textarea
+    max-height 100px
+
+  font
+    display none !important
+
+  +below(768px)
+    padding 30px

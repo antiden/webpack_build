@@ -1,0 +1,25 @@
+.totop
+  opacity 0
+  pointer-events none
+  position fixed
+  left 30px
+  bottom 20px
+  display flex
+  align-items center
+  justify-content center
+  background @css{rgba(var(--main_white), 0.5)}
+  border 1px solid @css{rgb(var(--main_graydark))}
+  width 40px
+  height 40px
+  transition all 0.3s
+  z-index 150
+
+  &.active
+    bottom 30px
+    opacity 1
+    pointer-events auto
+
+  &:hover
+    background @css{rgb(var(--main_color))}
+    border-color @css{rgb(var(--main_color))}
+    color @css{rgb(var(--main_white))}

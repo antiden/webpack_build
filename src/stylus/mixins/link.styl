@@ -1,11 +1,11 @@
-link(arguments = @css {rgb(var(--main_dark))})
-  color arguments
+link(color = @css {rgb(var(--main_color))}, hover = @css {rgb(var(--main_dark))})
+  color color
   display inline
   position relative
   cursor pointer
-  box-shadow inset 0 -1px 0 0 arguments
+  box-shadow inset color 0 -1px 0 0
   transition all 0.3s
 
   &:hover
-    color main_color
-    box-shadow inset 0 -1px 0 0 transparent
+    color hover
+    box-shadow inset hover 0 -2px 0 0

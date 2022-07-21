@@ -1,0 +1,22 @@
+// tabs
+.tabs
+  padding 0
+  margin 0
+  border-bottom 1px solid @css{rgb(var(--main_graydark))}
+  list-style none
+  display flex
+  align-items center
+
+  li
+    a
+      display flex
+      align-items center
+      justify-content center
+      padding 10px 30px
+      background @css{rgb(var(--main_gray))}
+      font-family var(--font_bold)
+
+    &.active
+      a
+        background @css{rgb(var(--main_graydark))}
+        color @css{rgb(var(--blue))}

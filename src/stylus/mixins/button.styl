@@ -1,54 +1,50 @@
-button(bg = @css {rgb(var(--main_color))}, border = @css {rgb(var(--main_color))}, color = @css {rgb(var(--main_white))})
+button(bg = @css {rgb(var(--main_color))}, border = @css {rgb(var(--main_color))}, color = @css {rgb(var(--main_white))}, hover = @css {rgb(var(--main_color_hover))})
   position relative
   background bg
-  border 1px solid border
   color color
   margin 0
   padding 5px 20px
-  min-width 100px
-  height var(--button_height)
-  border-radius var(--border_radius)
-  font-size 0.8em
-  font-family var(--head_regular)
+  min-height 50px
+  line-height normal
+  border 1px solid border
+  border-radius 100px
+  font-size 1em
+  text-transform none
+  font-family var(--font_regular)
   cursor pointer
   display inline-flex
   align-items center
   justify-content center
+  gap 15px
   text-align center
   overflow hidden
-  text-transform uppercase
-  font-size 1em
   transition all 0.3s
   z-index 1
 
-  span
-    display inline-block
-    width 20px
-    overflow hidden
-    align-items center
-    margin-left 10px
-    text-align right
-    transition width 0.3s
-    
-    svg
-      width 30px
-      fill color
-      height auto
-      margin-left -10px
-      transition all 0.3s
+  i
+    font-size 1.4em
+
+  &::after
+    content ''
+    position absolute
+    display block
+    top 0
+    right 0
+    width 0
+    height 100%
+    background hover
+    transition all 0.3s cubic-bezier(0.42, 0, 0.58, 1)
+    z-index -1
 
   &:hover
-    border-color @css {rgb(var(--main_color_hover))}
-    background @css {rgb(var(--main_color_hover))}
-    color @css {rgb(var(--main_white))}
+    color @css{rgb(var(--main_white))}
+    border-color hover
+    gap 20px
 
-    span
-      width 30px
-      
-      svg
-        fill bg
+    &::after
+      width 100%
+      left 0
+      right auto
 
   &:active
     transform scale(0.95)
-
-    

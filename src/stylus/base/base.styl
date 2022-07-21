@@ -1,0 +1,39 @@
+colors = {
+  color: #1149ee,
+  color_hover: #0b37ba,
+  dark: #3B3A39,
+  white: #FFFFFF,
+  gray: #eef9fe,
+  graydark: #dee4e7,
+  blue: #1149ee,
+  green: #04D200,
+  red: #D20000
+}
+
+hextorgb(color)
+  join(', ', red(color) green(color) blue(color))
+  
+:root
+  colors
+  for name, color in colors
+    --main_{name}: unquote(hextorgb(color))
+    --main_{name}__hex: color
+
+  // fonts
+  --font_regular 'ProximaNovaRegular', Arial, Helvetica, sans-serif
+  --font_bold 'ProximaNovaBold'
+  --head_regular 'PodkovaBold'
+
+  // sizes
+  --font_size: 16px
+  --line_height: 26px
+
+  // vars
+  --width: 1300px
+  --border_radius: 0
+  --button_height: 50px
+
++below(480px)
+  :root
+    --font_size: 14px
+    --line_height: 22px

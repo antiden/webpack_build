@@ -1,0 +1,33 @@
+.pager
+  margin-top 50px
+
+  ul
+    list-style none
+    display flex
+    align-items center
+    justify-content center
+
+  li
+    a
+      display inline-flex
+      align-items center
+      justify-content center
+      width 50px
+      height 50px
+      border 1px solid @css {rgb(var(--main_graydark))}
+      color @css {rgb(var(--main_dark))}
+      background @css {rgb(var(--main_white))}
+      margin 2px
+      position relative
+      border-radius 5px
+      z-index 1
+
+      &:hover
+        border-color @css { rgb(var(--main_color)) }
+        color @css { rgb(var(--main_color)) }
+
+    &.is-active
+      a
+        background @css {rgb(var(--main_gray))}
+        color @css { rgb(var(--main_color)) }
+        border-color @css {rgb(var(--main_graydark))}

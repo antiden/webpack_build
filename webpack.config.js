@@ -1,9 +1,9 @@
-const THEMEDIR = ".";
-const path = require('path');
-const WebpackAssetsManifest = require('webpack-assets-manifest');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+const THEMEDIR = "."
+const path = require('path')
+const WebpackAssetsManifest = require('webpack-assets-manifest')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CopyPlugin = require("copy-webpack-plugin")
+const TerserPlugin = require("terser-webpack-plugin")
 
 module.exports = {
   entry: {
@@ -26,9 +26,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        loader: 'esbuild-loader'
       },
       {
         test: /\.css$/,
